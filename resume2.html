@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized Resume Builder</title>
+    <link rel="stylesheet" href="resume2.css">
+
+</head>
+<body>
+    <img src="reset.png" id="resetButton">
+
+    <div class="container">
+
+
+        <div class="header">
+
+
+        <img src="avory.jpeg" id="uploadedImage">
+     
+        <div class="hs">
+            <h1 id="nameOutput">AVORY LANE</h1>
+            <h2 class="space2h2" id="titleoutput">Web Developer</h2>
+        </div>
+
+
+        </div>
+
+        <div class="body">
+            <h3 class="space2h3" >CAREER OBJECTIVE</h3>
+            <p class="space2p" id="careeroutput">To secure a dynamic role in web development where I can apply my passion for building innovative, user-friendly websites and continuously grow my skills in cutting-edge technologies.</p>
+            
+            <h3 class="space2h3" id="space2h3id">EXPERIENCE</h3>
+            
+            <p class="space2p" id="expoutput">Experienced web developer skilled in building responsive websites and dynamic web applications using HTML, CSS, JavaScript, and React. Focused on optimizing performance, enhancing user experience, and collaborating with teams to deliver high-quality solutions. Proficient in integrating APIs and ensuring cross-browser compatibility.</p>
+            
+
+           </div>
+           <div class="body1">
+            <div class="space1">
+            <h3 class="space2h3" id="space2h3id2">EDUCATION</h3>
+
+            <p class="space2p" id="degreeoutput">Bachlor's in Computer Science.</p>
+            <p class="space2p" id="collageoutput">Oxford University London.</p>
+            <p class="space2p" id="passedoutput">passed in 2024.</p>
+            
+            <h3 class="space2h3" id="space2h3id3">HOBBIES AND INTERESTS</h3>
+
+            <p class="space2p" id="hobbiesoutput">Reading, Writing, Programming, Travelling.</p>
+        </div>
+
+        <div class="space2">
+            <h3  class="boxstuff">Phone</h3>
+            <p  id="phoneoutput">+123-456-7890</p>
+            <h3 class="boxstuff">E-mail</h3>
+            <p   id="emailoutput">123456789@gmail.com</p>
+            <h3 class="boxstuff">Address</h3>
+            <p  id="homeaddoutput">123 Anywhere St. Any City</p>
+        </div>
+
+           </div>
+
+
+
+        <div class="body2">
+        <div class="box2">
+            <h2 class="boxstuff" id="skills">SKILLS</h2>
+
+            <p class="boxstuff" id="fskilloutput">Full Stack Developer</p>
+            <p class="boxstuff" id="sskilloutput">Python</p>
+            <p class="boxstuff" id="thskilloutput">Javascript</p>
+
+        </div>
+        <div class="box3">
+
+            <h2 class="boxstuff" id="links">LINKS</h2>
+            <h3 class="boxstuff">Linkedin</h3>
+            <p class="boxstuff" id="linkoutput">www.myprofile/linkedin.com</p>
+            <h3 class="boxstuff">Website/Portfolio</h3>
+            <p class="boxstuff" id="weboutput">www.whatever.com</p>
+
+        </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    
+
+
+    <script>
+        // Get data from localStorage
+        const name = localStorage.getItem('name');
+        const title = localStorage.getItem('title');
+        const email = localStorage.getItem('email');
+        const phone = localStorage.getItem('phone');
+        const homeadd = localStorage.getItem('homeadd');
+        const linkedin = localStorage.getItem('linkedin');
+        const website = localStorage.getItem('website');
+        const career = localStorage.getItem('career');
+        const degree = localStorage.getItem('degree');
+        const collage = localStorage.getItem('collage');
+        const passed = localStorage.getItem('passed');
+        const exp = localStorage.getItem('exp');
+        const fskill = localStorage.getItem('fskill');
+        const sskill = localStorage.getItem('sskill');
+        const thskill = localStorage.getItem('thskill');
+        const hobbies = localStorage.getItem('hobbies');
+        
+       
+
+
+       // Display data in <p> tags
+       document.getElementById('nameOutput').textContent = `${name}`;
+       document.getElementById('titleoutput').textContent = `${title}`;
+       document.getElementById('emailoutput').textContent = `${email}`;
+       document.getElementById('phoneoutput').textContent = `${phone}`;
+       document.getElementById('homeaddoutput').textContent = `${homeadd}`;
+       document.getElementById('linkoutput').textContent = `${linkedin}`;
+       document.getElementById('weboutput').textContent = `${website}`;
+       document.getElementById('careeroutput').textContent = `${career}`;
+       document.getElementById('degreeoutput').textContent = `${degree}`;
+       document.getElementById('collageoutput').textContent = `${collage}`;
+       document.getElementById('passedoutput').textContent = `${passed}`;
+       document.getElementById('expoutput').textContent = `${exp}`;
+       document.getElementById('fskilloutput').textContent = `${fskill}`;
+       document.getElementById('sskilloutput').textContent = `${sskill}`;
+       document.getElementById('thskilloutput').textContent = `${thskill}`;
+       document.getElementById('hobbiesoutput').textContent = `${hobbies}`;
+
+
+
+
+
+           
+       
+       
+       
+       
+       
+       
+       document.getElementById('resetButton').addEventListener('click', function () {
+       localStorage.removeItem('name');
+       localStorage.removeItem('uploadedImage')
+       alert('Data reset! Redirecting to form page...');
+       window.location.href = 'form2.html';
+   });
+
+
+
+    
+   // Get image data from localStorage
+   const imageData = localStorage.getItem('imageData');
+
+if (imageData) {
+   // Set the src of the <img> tag
+   document.getElementById('uploadedImage').src = imageData;
+
+   
+} else {
+   alert('No image uploaded!');
+}
+
+
+
+
+
+      
+   </script>
+</body>
+</html>

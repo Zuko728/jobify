@@ -1,0 +1,107 @@
+body{
+    background-color:rgb(139, 139, 248);
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.header{
+    text-align: center  ;
+    color: white;
+    font-size: 60px;
+    margin-top: 0;
+
+} 
+.h1{
+    text-align: center;
+    font-size: 30px;
+    /* padding-top: 10px; */
+    text-transform: uppercase;
+    border-bottom: 3px solid rgb(139, 139, 248) ;
+
+    
+}
+h2{
+    font-size: 20px;
+}
+div{
+    background-color: white;
+    /* margin-left: 20%;
+    margin-right: 20%; */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 30px;
+    padding-left: 15%;
+    padding-right: 15%;
+    /* border-top: 2px solid black; */
+    box-shadow: 0 2px 8px black;
+}
+#dataForm{
+    width: 40%;
+}
+/* .div1, {
+    
+    display: inline-block;
+    width: 70%;
+} */
+form{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+input,textarea,select{
+    display: inline-block;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+    margin-top: 30px;
+    border: 1px solid grey;
+}
+#from,#to{
+    margin-top: 0px;
+}
+#Address, #Career, #hobbies,#skills{
+    display: inline-block;
+    height: 150px;
+}
+button{
+    margin-left: 40%;
+    margin-right: 40%;
+    display: inline-block;
+    width: 20%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 50px;
+    /* margin-top: 20px; */
+}
+button:hover{
+    background-color: #AAC7D8;
+    font-size: 18px;
+    transition: 0.2s;
+    width: 25%;
+    margin-left: 37.5%;
+    margin-right: 37.5%;
+    /* color: white; */
+    
+}
+.back{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+.skills{
+    height: 30px;
+}
+#hobbies{
+    height: 30px;
+}
+#exp{
+    height: 100px;
+}
+#career{
+    height: 100px;
+}
+#imageInput{
+    border: none;
+}

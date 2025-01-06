@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form1.css">
+    <script src="script.js"></script>
+    <title>Resume builder</title>
+</head>
+<body>
+    <a href="template.html">
+<img src="back3.png" class="back">
+</a>
+
+    <h1 class="header">LET'S GET YOU HIRED!</h1>
+
+<form  id="dataForm">
+
+    <div class="div1">
+    
+
+        <h1 class="h1">Basic Information</h1>
+
+        <input type="text" placeholder="Full Name" id="name" name="name" required>
+
+        <input type="text" placeholder="Title" id="title" name="title" required>
+
+        <input type="email" placeholder="E-mail Address" id="email" name="email" required>
+
+        <input type="tel"  placeholder="Phone Number" id="phone" name="phone" required>
+
+       <textarea name="" placeholder="Address" id="homeadd" name="homeadd" required></textarea>
+
+        <input type="url" placeholder="Linkedin Profile" id="linkedin" name="linkedin">
+
+        <input type="url" placeholder="Portfolio/Website" id="website" name="website">
+
+</div>
+
+<div class="div2">
+    <h1 class="h1">Career Objective</h1>
+    <textarea name="career" id="career" placeholder="Objective/Summary" required></textarea>
+</div>
+
+<div class="div3">
+    <h1 class="h1">Education Details</h1>
+    <input type="text" placeholder="Degree/Qualification" id="degree" name="degree" required>
+
+    <input type="text" placeholder="School/College Name" id="collage" name="collage" required>
+
+    <input type="datetime" placeholder="Year of Passing" id="passed" name="passed" required>
+
+</div>
+
+<div class="div4">
+    <h1 class="h1">Work Experience</h1>
+    <textarea type="text" placeholder="Describe Your Experience" id="exp" name="exp" required></textarea>
+
+  
+</div>
+
+<div class="div5">
+    <h1 class="h1">Skills</h1>
+    <input name="" class="skills" placeholder="Enter Your Skill" id="fskill" name="fskill"></input>
+    <input name="" class="skills" placeholder="Enter Your Skill" id="sskill" name="sskill"></input>
+    <input name="" class="skills" placeholder="Enter Your Skill" id="thskill" name="thskill"></input>
+</div>
+
+
+
+
+<div class="div7">
+    <h1 class="h1">Hobbies and Interests</h1>
+    <textarea   placeholder="Hobbies" id="hobbies" name="hobbies"></textarea>
+</div>
+
+<div class="div8">
+    <h1 class="h1">Upload Your Profile</h1>
+    <input type="file" id="imageInput" accept="image/*">
+</div>
+<button type="submit" >Generate Resume</button>  
+
+</form>
+
+
+
+
+
+<script>
+     document.getElementById('dataForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const title = document.getElementById('title').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const homeadd = document.getElementById('homeadd').value;
+            const linkedin = document.getElementById('linkedin').value;
+            const website = document.getElementById('website').value;
+            const career = document.getElementById('career').value;
+            const degree = document.getElementById('degree').value;
+            const collage = document.getElementById('collage').value;
+            const passed = document.getElementById('passed').value;
+            const exp = document.getElementById('exp').value;
+            const fskill = document.getElementById('fskill').value;
+            const sskill = document.getElementById('sskill').value;
+            const thskill = document.getElementById('thskill').value;
+            const hobbies = document.getElementById('hobbies').value;
+            
+
+            // Save data to localStorage
+            localStorage.setItem('name', name);
+            localStorage.setItem('title', title);
+            localStorage.setItem('email', email);
+            localStorage.setItem('phone', phone);
+            localStorage.setItem('homeadd', homeadd);
+            localStorage.setItem('linkedin', linkedin);
+            localStorage.setItem('website', website);
+            localStorage.setItem('career', career);
+            localStorage.setItem('degree', degree);
+            localStorage.setItem('collage', collage);
+            localStorage.setItem('passed', passed);
+            localStorage.setItem('exp', exp);
+            localStorage.setItem('fskill', fskill);
+            localStorage.setItem('sskill', sskill);
+            localStorage.setItem('thskill', thskill);
+            localStorage.setItem('hobbies', hobbies);
+
+
+
+       
+
+
+            
+
+            window.location.href = 'resume2.html';
+        });
+    
+
+
+        document.getElementById('dataForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const fileInput = document.getElementById('imageInput');
+            const file = fileInput.files[0];
+
+            if (file) {
+                // Read the file as a Data URL
+                const reader = new FileReader();
+                reader.onload = function () {
+                    // Save the Data URL to localStorage
+                    localStorage.setItem('imageData', reader.result);
+
+                    // Redirect to display.html
+                    window.location.href = 'resume2.html';
+                };
+                reader.readAsDataURL(file); // Converts the file to a Base64 string
+            } else {
+                alert('Please select an image!');
+            }
+        });
+
+</script>
+
+    
+</body>
+</html>
